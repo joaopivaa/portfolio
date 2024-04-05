@@ -5,7 +5,6 @@
     --bg-box-skill: #edebe8; 
     --principal-color: #232121 ;
     --second-color: #434040; /* #CDCBCB #656464 */
-    --background-body: #f5f3f0;
     --background-project: #edebe8;
     --big-font: 5rem ;
     --media-font: 3rem ;
@@ -28,6 +27,7 @@ body {
 
 .header {
     width: 100%;
+    background-color: var(--bg-color);
     top: 0;
     position: fixed;
     z-index: 1000;
@@ -150,7 +150,7 @@ a {
     display: flex;
     padding: 22px 45px;
     align-items: center;
-    margin-top: 5rem;
+    padding-top: 5rem;
 }
 
 .about-div {
@@ -204,7 +204,7 @@ a {
     width: 100%;
     position: relative;
     padding: 22px 45px;
-    margin-top: 5rem;
+    padding-top: 5rem;
 }
 
 .title-skill {
@@ -255,7 +255,7 @@ a {
 .projects {
     width: 100%;
     position: relative;
-    margin-top: 5rem;
+    padding-top: 5rem;
 }
 
 .title-project {
@@ -375,20 +375,20 @@ a {
     flex-direction: column;
     align-items: center;
     position: relative;
-    margin-top: 10rem;
+    padding-top: 5rem;
 }
 
-.title-contact h3 {
+/* .title-contact h3 {
     font-size: 2rem;
     font-weight: 600;
-}
+} */
 
 .div-contact {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 5rem;
-    gap: 35px;
+    gap: 45px;
 }
 
 .div-contact h3 {
@@ -409,10 +409,14 @@ footer {
     align-items: center;
     position: relative;
     margin-top: 5rem;
-    gap: 40px;
+    gap: 50px;
 }
 
 footer a {
+    display: flex;
+    width: 45px;
+    height: 45px;
+    align-items: center;
     border: 1px solid var(--principal-color);
     border-radius: 50%;
     padding: 15px;
@@ -426,4 +430,34 @@ footer a {
     font-size: 0.8rem;
     background-color: var(--principal-color);
     color: #fff;
+}
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 899px) {
+
+    .home {
+        justify-content: center;
+    }
+
+    .home-div, .home-content {
+        align-items: center;
+    }
+
+    .home-content {
+        gap: 15px;
+    }
+
+    .home-photograph, .frase {
+        display: none;
+    }
+
+    .about-div {
+        justify-content: center;
+    }
+
+    .about-content ul {
+        list-style: none;
+        text-align: center;
+    }
 }
