@@ -436,7 +436,11 @@ footer a {
 
 @media (max-width: 899px) {
 
-    .home {
+    nav ul {
+        margin-right: 0px;
+    }
+
+    .home, .about-div {
         justify-content: center;
     }
 
@@ -452,12 +456,19 @@ footer a {
         display: none;
     }
 
-    .about-div {
-        justify-content: center;
+    .about {
+        padding-top: 0;
     }
 
     .about-content ul {
-        list-style: none;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
         text-align: center;
     }
+}
+
+@media (max-width: 850px) {
+
+    
 }
