@@ -25,7 +25,7 @@ body {
 
 /* HEADER */
 
-.header {
+header {
     width: 100%;
     background-color: var(--bg-color);
     top: 0;
@@ -36,6 +36,10 @@ body {
     flex-direction: row;
     justify-content: space-between;
     padding: 22px 45px;
+}
+
+.scrollTop {
+    box-shadow: -10px -10px 20px var(--principal-color);
 }
 
 .logo {
@@ -62,10 +66,6 @@ nav ul li:hover{
 }
 
 .navlist {
-    display: none;
-}
-
-.header-close {
     display: none;
 }
 
@@ -316,7 +316,7 @@ a {
     background: var(--bg-box-skill);
     padding: 35px 45px;
     border-radius: 8px;
-    transition: all .45s ease;
+    transition: all .5s ease;
 }
 
 .box-skill:hover{
@@ -526,6 +526,10 @@ footer a {
         display: none;
     }
 
+    .hidden {
+        overflow: hidden;
+    }
+
     .header-menu img {
         width: 25px;
         height: 20px;
@@ -542,7 +546,7 @@ footer a {
         background: var(--bg-color);
         text-align: center;
         justify-content: center;
-        transition: all .45s ease;
+        transition: all .5s ease;
     }
 
     .navlist.open {
@@ -635,10 +639,15 @@ footer a {
         text-align: center;
     }
 
-    .buttons-row a {
-        border-bottom: 0px;
+    .row-black .buttons-row a, .row-gray .buttons-row a {
         background-color: var(--principal-color);
         border-radius: 5px;
+        padding: 3px;
+        color: #fff;
+    }
+
+    .row-gray .buttons-row a:hover, .row-black .buttons-row a:hover {
+        border: none;
     }
 
     .buttons-row a img {
@@ -647,10 +656,6 @@ footer a {
 
     .row-text, .content-row {
         color: var(--principal-color);
-    }
-
-    .row-gray .buttons-row a {
-        color: #fff;
     }
 }
 
