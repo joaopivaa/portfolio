@@ -241,8 +241,9 @@ a {
 }
 
 .experience-content {
+    width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     margin-top: 3.5rem;
 }
@@ -262,7 +263,6 @@ a {
     background-color: var(--bg-box-skill);
     padding: 20px;
     border-radius: 10px;
-    width: 55vw;
 }
 
 .work-details h1 {
@@ -437,6 +437,7 @@ a {
 }
 
 .row-gray .row-text {
+    width: 60%;
     color: var(--principal-color);
 }
 
@@ -729,5 +730,7 @@ footer a {
         flex-direction: column;
         align-items: center;
         gap: 20px;
+        text-align: center;
+        line-height: 20px;
     }
 }
