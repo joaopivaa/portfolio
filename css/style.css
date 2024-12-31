@@ -65,9 +65,12 @@ li a {
     font-size: 1rem;
 }
 
+nav ul li {
+    transition: transform .2s ease-in-out;
+}
+
 nav ul li:hover{
     border-bottom: 2px solid var(--principal-color);
-    transition: .05s;
 }
 
 .navlist {
@@ -91,6 +94,10 @@ nav ul li:hover{
 
 a {
     text-decoration: none;
+}
+
+.header-close {
+    display: none;
 }
 
 /* HOME */
@@ -142,14 +149,19 @@ a {
 .btn-contact {
     display: inline-block;
     background-color: var(--principal-color);
+    border: 1px solid var(--principal-color);
     color: #fcfcfc;
     border-radius: 10px;
     padding: 14px;
+    transition: transform .2s linear;
 }
 
-/* .btn-contact:hover, .btn-project:hover {
-    box-shadow: 2.5px 2.5px 4px 1.5px #00000033 ;
-} */
+.btn-contact:hover {
+    background-color: var(--bg-color);
+    border: 1px solid var(--principal-color);
+    color: var(--principal-color);
+    transform: translateY(-5px);
+}
 
 .btn-project {
     display: inline-block;
@@ -158,6 +170,14 @@ a {
     border-radius: 10px;
     padding: 14px;
     margin-left: 15px;
+    transition: transform .2s linear;
+}
+
+.btn-project:hover {
+    background-color: var(--principal-color);
+    border: 1px solid var(--principal-color);
+    color: #fcfcfc;
+    transform: translateY(-5px);
 }
 
 .home-photograph img {
@@ -424,12 +444,24 @@ a {
     font-size: 0.8rem;
     color: #fcfcfc;
     font-weight: 500;
+    position: relative;
 }
 
-.buttons-row a:hover {
-    border-bottom: 2px solid #fcfcfc;
-    transition: .05s;
+.buttons-row a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: #fcfcfc;
+    transition: width 0.2s ease-in-out;
 }
+
+.buttons-row a:hover::after {
+    width: 100%;
+}
+
 
 .buttons-row a img {
     width: 11px;
@@ -439,9 +471,6 @@ a {
 .row-gray .row-text {
     width: 60%;
     color: var(--principal-color);
-}
-
-.row-gray .row-text {
     margin-left: 50px;
 }
 
@@ -450,14 +479,11 @@ a {
 }
 
 .row-gray .buttons-row a {
-    font-size: 0.8rem;
     color: var(--principal-color);
-    font-weight: 500;
 }
 
-.row-gray .buttons-row a:hover {
-    border-bottom: 2px solid var(--principal-color);
-    transition: .05s;
+.row-gray .buttons-row a::after {
+    background-color: var(--principal-color);
 }
 
 /* CONTATOS */
@@ -541,11 +567,6 @@ footer a {
 
     .hidden {
         overflow: hidden;
-    }
-
-    .header-menu img {
-        width: 25px;
-        height: 20px;
     }
 
     .navlist {
@@ -634,6 +655,7 @@ footer a {
 
     .row-gray .row-text {
         margin-left: 0;
+        width: auto;
     }
 
     .row-text {
