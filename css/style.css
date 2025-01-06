@@ -666,6 +666,7 @@ footer a {
         bottom: 0;
         overflow: hidden;
         padding: 0 40px;
+        text-align: center;
         transition: height 0.5s;
     }
 
@@ -677,7 +678,7 @@ footer a {
     .row-black .buttons-row a, .row-gray .buttons-row a {
         background-color: var(--principal-color);
         border-radius: 5px;
-        padding: 3px;
+        padding: 5px 10px;
         color: #fcfcfc;
     }
 
@@ -728,6 +729,10 @@ footer a {
     
     .icons {
         gap: 50px;
+    }
+
+    .about-content {
+        padding: 40px 50px;
     }
 }
 
